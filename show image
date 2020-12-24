@@ -1,0 +1,8 @@
+from keras.preprocessing import image
+import matplotlib.pyplot as plt1
+
+img = image.load_img(path="/content/tsta.jpg", grayscale=True, target_size=(28,28,1))
+img = image.img_to_array(img)
+plt1.imshow(image.array_to_img(img), cmap="gray")
+img = img.astype('float')/255
+test_img = img.reshape((1, 28, 28, 1))
